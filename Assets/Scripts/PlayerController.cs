@@ -7,14 +7,15 @@ public class PlayerController : MonoBehaviour
     public GameObject head, tail;
     Rigidbody headRb, tailRb;
     float headMoveTime;
-    int headDirection;
-    float headSpeed;
-    public float maxHeadSpeed, tailSpeed;
+    int headDirection, tailDirection;
+    float headSpeed, tailSpeed;
+    public float maxHeadSpeed, baseTailSpeed;
     // Start is called before the first frame update
     void Start()
     {
         headRb = head.GetComponent<Rigidbody>();
         tailRb = tail.GetComponent<Rigidbody>();
+        tailSpeed = baseTailSpeed;
     }
 
     // Update is called once per frame
@@ -30,22 +31,26 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKey(KeyCode.A))
         {
-            tailRb.velocity = Vector3.left * tailSpeed;
+            tailDirection = -1;
+            tailSpeed += Time.deltaTime;
         }
 
         else if (Input.GetKey(KeyCode.D))
         {
-            tailRb.velocity = Vector3.right * tailSpeed;
+            tailDirection = 1;
+            tailSpeed += Time.deltaTime;
         }
         
         else
         {
-            tailRb.velocity = Vector3.zero;
+            tailDirection = 0;
+            tailSpeed = baseTailSpeed;
         }
     }
 
     private void FixedUpdate()
     {
         headRb.velocity = Vector3.right * headDirection * headSpeed + Vector3.up * 3;
+        tailRb.velocity = Vector3.right * tailDirection * tailSpeed;
     }
 }

@@ -391,7 +391,7 @@ MonoBehaviour:
   head: {fileID: 2041759962202420220}
   tail: {fileID: 2041759962202420221}
   maxHeadSpeed: 2
-  tailSpeed: 2
+  baseTailSpeed: 2
 --- !u!1 &1798375452 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7113623066988553347, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
