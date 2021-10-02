@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Borders : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameController gm;
 
-    // Update is called once per frame
-    void Update()
+    public void Start()
     {
-        
+        gm = FindObjectOfType<GameController>();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Rocket")
+        {
+            gm.GameOver();
+        }
     }
 }
