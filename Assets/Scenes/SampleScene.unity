@@ -214,7 +214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -292,11 +292,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.0039997, z: -10.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2041759962202420226}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1195720195 stripped
@@ -304,21 +304,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2375957823057372122, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
   m_PrefabInstance: {fileID: 2041759962202420219}
   m_PrefabAsset: {fileID: 0}
---- !u!138 &1195720196
-FixedJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195720195}
-  m_ConnectedBody: {fileID: 1798375454}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!54 &1195720197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -335,19 +320,14 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1198701620 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7133084376311897592, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
-  m_PrefabInstance: {fileID: 2041759962202420219}
-  m_PrefabAsset: {fileID: 0}
---- !u!138 &1198701621
+--- !u!138 &1195720199
 FixedJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198701620}
-  m_ConnectedBody: {fileID: 2041759962202420225}
+  m_GameObject: {fileID: 1195720195}
+  m_ConnectedBody: {fileID: 1798375454}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -355,6 +335,11 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!1 &1198701620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7133084376311897592, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
+  m_PrefabInstance: {fileID: 2041759962202420219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &1198701622
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -371,19 +356,14 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1798375452 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7113623066988553347, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
-  m_PrefabInstance: {fileID: 2041759962202420219}
-  m_PrefabAsset: {fileID: 0}
---- !u!138 &1798375453
+--- !u!138 &1198701624
 FixedJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798375452}
-  m_ConnectedBody: {fileID: 1198701622}
+  m_GameObject: {fileID: 1198701620}
+  m_ConnectedBody: {fileID: 2041759962202420225}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -391,6 +371,32 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!1 &1232427155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3492787831749141321, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
+  m_PrefabInstance: {fileID: 2041759962202420219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1232427156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232427155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1793b7d1c24712e43afa1b37d3dc0171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 2041759962202420220}
+  tail: {fileID: 2041759962202420221}
+  maxHeadSpeed: 2
+  tailSpeed: 2
+--- !u!1 &1798375452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7113623066988553347, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
+  m_PrefabInstance: {fileID: 2041759962202420219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &1798375454
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -407,6 +413,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!138 &1798375456
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798375452}
+  m_ConnectedBody: {fileID: 1198701622}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1001 &2041759962202420219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,7 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3923961250482256813, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3923961250482256813, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
       propertyPath: m_LocalPosition.x
@@ -561,3 +582,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &2041759962202420226 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5852093484731674270, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
+  m_PrefabInstance: {fileID: 2041759962202420219}
+  m_PrefabAsset: {fileID: 0}
