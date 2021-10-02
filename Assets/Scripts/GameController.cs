@@ -15,10 +15,24 @@ public class GameController : MonoBehaviour
     public Text lastedDuration;
     public Text hs;
 
+    public static GameController instance;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         started = false;
         hs.text = PlayerPrefs.GetFloat("Highscore").ToString();
         titleScreen.SetActive(true);
@@ -59,6 +73,7 @@ public class GameController : MonoBehaviour
     public void StartGame()
     {
         started = true;
+        Time.timeScale = 1;
     }
 
     public void ResetLevel()

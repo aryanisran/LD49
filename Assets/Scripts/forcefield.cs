@@ -12,9 +12,9 @@ public class forcefield : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Bullets")
+        if (other.tag == "Bullet")
         {
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 }

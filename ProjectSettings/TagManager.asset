@@ -8,6 +8,7 @@ TagManager:
   - LeftWall
   - RightWall
   - Bullet
+  - ForceField
   layers:
   - Default
   - TransparentFX

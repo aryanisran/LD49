@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Destroy(gameObject, 2.5f);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -25,7 +26,8 @@ public class Bullet : MonoBehaviour
                 rb.velocity = Vector3.Reflect(rb.velocity, Vector3.right);
                 bounced = true;
                 break;
-            case "Player":
+            case "Rocket":
+                GameController.instance.GameOver();
                 break;
             default:
                 break;
