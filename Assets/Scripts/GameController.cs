@@ -58,6 +58,7 @@ public class GameController : MonoBehaviour
             PlayerPrefs.SetFloat("Highscore", Mathf.Round(duration));
         }
         Time.timeScale = 0;
+        //started = false;
         gameOverScreen.SetActive(true);
     }
 

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3923961250482256813}
+  - component: {fileID: 1096107568505844119}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -35,6 +36,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1096107568505844119
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3492787831749141321}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0218d00d972843847aa76c4b926b12a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!54 &6346665744542944964
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -115,6 +135,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 38be3aad316abb84f97fee6f4f7df1e9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7757424edea8ec3499ba0d01636512de, type: 2}
     - target: {fileID: 919132149155446097, guid: 38be3aad316abb84f97fee6f4f7df1e9, type: 3}
       propertyPath: m_Name
       value: rocket_fuelA
@@ -177,6 +201,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 170056aa111281c42bc74f667e7f96a7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7757424edea8ec3499ba0d01636512de, type: 2}
     - target: {fileID: 919132149155446097, guid: 170056aa111281c42bc74f667e7f96a7, type: 3}
       propertyPath: m_Name
       value: rocket_baseA
@@ -239,6 +267,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 207ef45a02cc24044abd91d5b372cf72, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7757424edea8ec3499ba0d01636512de, type: 2}
     - target: {fileID: 919132149155446097, guid: 207ef45a02cc24044abd91d5b372cf72, type: 3}
       propertyPath: m_Name
       value: rocket_topA
@@ -310,6 +342,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3cf31e449696faf4690ba86acddcab08, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7757424edea8ec3499ba0d01636512de, type: 2}
     - target: {fileID: 919132149155446097, guid: 3cf31e449696faf4690ba86acddcab08, type: 3}
       propertyPath: m_Name
       value: rocket_sidesB
@@ -372,6 +408,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 093473a874262c9418eaf83966d027df, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7757424edea8ec3499ba0d01636512de, type: 2}
     - target: {fileID: 919132149155446097, guid: 093473a874262c9418eaf83966d027df, type: 3}
       propertyPath: m_Name
       value: rocket_finsB
