@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Rocket
+  - LeftWall
+  - RightWall
+  - Bullet
   layers:
   - Default
   - TransparentFX

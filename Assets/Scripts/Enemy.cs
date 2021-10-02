@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
             float projectileDirYPosition = startPoint.y + Mathf.Cos((angle * Mathf.PI) / 180) * radius;
 
             // Create vectors.
-            Vector3 projectileVector = new Vector3(projectileDirXPosition, projectileDirYPosition, 0);
+            Vector3 projectileVector = new Vector3(projectileDirXPosition, projectileDirYPosition, transform.position.z);
             Vector3 projectileMoveDirection = (projectileVector - startPoint).normalized * projectileSpeed;
 
             // Create game objects.
