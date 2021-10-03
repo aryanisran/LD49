@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour
 
     public static GameController instance;
 
+    public Image[] healthUI;
+
     private void Awake()
     {
         if(instance == null)
@@ -80,5 +82,20 @@ public class GameController : MonoBehaviour
     public void ResetLevel()
     {
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void UpdateHealth(int _health)
+    {
+        for (int i = 0; i < healthUI.Length; i++)
+        {
+            if (i < _health)
+            {
+                healthUI[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                healthUI[i].gameObject.SetActive(false);
+            }
+        }
     }
 }

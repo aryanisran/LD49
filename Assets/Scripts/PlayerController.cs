@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     int headDirection, tailDirection;
     float headSpeed, tailSpeed;
     public float maxHeadSpeed, baseTailSpeed, moveUpSpeed;
+    public int health;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,5 +83,15 @@ public class PlayerController : MonoBehaviour
         Instantiate(forcefieldPrefab, head.transform.position, Quaternion.identity);
         yield return new WaitForSeconds(5f);
         canUseSkill = true;
+    }
+
+    public void LoseHealth()
+    {
+        health--;
+        GameController.instance.UpdateHealth(health);
+        if(health <= 0)
+        {
+            GameController.instance.GameOver();
+        }
     }
 }

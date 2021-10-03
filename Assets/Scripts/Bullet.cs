@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
                 bounced = true;
                 break;
             case "Rocket":
-                GameController.instance.GameOver();
+                other.GetComponent<PlayerController>().LoseHealth();
                 break;
             default:
                 break;
