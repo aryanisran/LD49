@@ -17,6 +17,7 @@ public class PowerUp : MonoBehaviour
                     GameController.instance.SetBounce();
                     break;
                 case _power.boost:
+                    other.GetComponent<PlayerController>().SetBoosting();
                     break;
                 default:
                     break;

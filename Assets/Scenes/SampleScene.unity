@@ -3144,10 +3144,11 @@ MonoBehaviour:
   canBeDamaged: 0
   maxHeadSpeed: 1
   baseTailSpeed: 4
-  moveUpSpeed: 7
+  baseMoveUpSpeed: 7
   invulnTime: 1
+  boostTime: 5
   health: 3
-  bouncing: 0
+  boosting: 0
 --- !u!136 &2041759962202420228
 CapsuleCollider:
   m_ObjectHideFlags: 0
