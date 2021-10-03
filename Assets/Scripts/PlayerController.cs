@@ -72,8 +72,6 @@ public class PlayerController : MonoBehaviour
         {
             headRb.velocity = Vector3.right * headDirection * headSpeed + head.transform.up * moveUpSpeed;
             tailRb.velocity = Vector3.right * tailDirection * tailSpeed;
-            Debug.Log(headRb.velocity);
-            Debug.Log(tailRb.velocity);
         }
     }
 

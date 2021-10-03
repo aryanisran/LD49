@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3177a66482a164b88093f9c27d2c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfProjectiles: 10
+  numberOfProjectiles: 6
   projectileSpeed: 5
   ProjectilePrefab: {fileID: 2789531987388973649, guid: 7a36784169e81124eab208d47bcf6ab5, type: 3}
   fireRate: 2

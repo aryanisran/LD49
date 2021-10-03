@@ -112,11 +112,12 @@ MonoBehaviour:
   pathPrefab: {fileID: 6425075622533317997}
   spawnPoint: {fileID: 8307713807291091809}
   powerUp: {fileID: 5808268974329313757, guid: 0abca7f82380b7e459e356fe50305d5f, type: 3}
-  powerSpawnPoint:
+  enemy: {fileID: 5201808188438611552, guid: 5b45e4358443d37409d0d014299e8bff, type: 3}
+  itemSpawnPoint:
   - {fileID: 2148902699338235154}
   - {fileID: 4033457368031124193}
-  - {fileID: 3959490776727174474}
   - {fileID: 7783704447433889751}
+  - {fileID: 3959490776727174474}
 --- !u!1 &2148902699338235154
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe2a5fb271aaddc409be353369ba6623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
 --- !u!1 &6425075622533317997
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe2a5fb271aaddc409be353369ba6623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
 --- !u!1 &7783704447433889751
 GameObject:
   m_ObjectHideFlags: 0

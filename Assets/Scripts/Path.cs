@@ -8,19 +8,29 @@ public class Path : MonoBehaviour
     public GameObject pathPrefab;
     public GameObject spawnPoint;
 
-    public GameObject powerUp;
+    public GameObject powerUp, enemy;
 
-    public GameObject[] powerSpawnPoint;
+    public GameObject[] itemSpawnPoint;
 
 
     private void Start()
     {
-        foreach (GameObject point in powerSpawnPoint)
+        foreach (GameObject point in itemSpawnPoint)
         {
             int chance = Random.Range(1, 10);
+            GameObject item = null;
             if (chance >= 1 && chance <= 5)
             {
-                Instantiate(powerUp, point.transform.position, Quaternion.identity);
+                item = Instantiate(powerUp, point.transform.position, Quaternion.identity);
+                
+            }
+            else if (chance == 6)
+            {
+                item = Instantiate(enemy, point.transform.position, Quaternion.identity);
+            }
+            if(item != null)
+            {
+                item.transform.SetParent(transform, true);
             }
         } 
     }
