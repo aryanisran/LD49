@@ -6,8 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject thePlayer;
+
     public GameObject gameOverScreen;
     public GameObject titleScreen;
+
+    public GameObject deathfx;
 
     float duration;
     public bool started, bouncyWalls;
@@ -60,6 +64,14 @@ public class GameController : MonoBehaviour
         {
             PlayerPrefs.SetFloat("Highscore", Mathf.Round(duration));
         }
+        StartCoroutine(ggfx());
+    }
+
+    public IEnumerator ggfx()
+    {
+        Destroy(thePlayer.gameObject);
+        Instantiate(deathfx, thePlayer.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
         Time.timeScale = 0;
         //started = false;
         gameOverScreen.SetActive(true);

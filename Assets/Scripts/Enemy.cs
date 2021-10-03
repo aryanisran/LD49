@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public float projectileSpeed;               // Speed of the projectile.
     public GameObject ProjectilePrefab;         // Prefab to spawn.
     public float fireRate;                      // Rate that bullet waves will be spawned
-
+    public GameObject deathfx;
 
     [Header("Private Variables")]
     private Vector3 startPoint;                 // Starting position of the bullet.
@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
     public IEnumerator Death()
     {
         dead = true;
-        //enemy death fx
+        Instantiate(deathfx, transform.position, transform.rotation);
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
     }
