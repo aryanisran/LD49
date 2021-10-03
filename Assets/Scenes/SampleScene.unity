@@ -1530,7 +1530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 682267561}
-  offset: 5.2
+  offset: 4.5
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2800,11 +2800,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 655503285114910877, guid: a7707af78b6ed4d41bf947e22c2870c8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.35604
+      value: 0.4005094
       objectReference: {fileID: 0}
     - target: {fileID: 655503285114910877, guid: a7707af78b6ed4d41bf947e22c2870c8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5440291
+      value: 0.5711762
       objectReference: {fileID: 0}
     - target: {fileID: 655503285114910877, guid: a7707af78b6ed4d41bf947e22c2870c8, type: 3}
       propertyPath: m_LocalScale.z
