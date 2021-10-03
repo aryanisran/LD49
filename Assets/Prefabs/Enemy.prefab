@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8418498487492367231}
   - component: {fileID: 5994419251278358453}
   - component: {fileID: 4967999448590793519}
+  - component: {fileID: 7065656952988603228}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -184,3 +185,16 @@ MonoBehaviour:
   projectileSpeed: 5
   ProjectilePrefab: {fileID: 2789531987388973649, guid: 7a36784169e81124eab208d47bcf6ab5, type: 3}
   fireRate: 2
+--- !u!135 &7065656952988603228
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201808188438611552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.29999998
+  m_Center: {x: 0, y: 0.17499998, z: 0}

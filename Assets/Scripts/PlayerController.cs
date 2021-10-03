@@ -1,10 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public GameController gm;
+    
+    public float fireRate;
+    bool firecooldown = true;
+    //public bool shooting;
+    [SerializeField] GameObject firePoint;
+    [SerializeField] GameObject bullet;
+    [SerializeField] Slider cooldownIndi;
+    float cd = 5f;
 
     public GameObject forcefieldPrefab;
     public GameObject head, tail;
@@ -30,6 +39,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        cooldownIndi.value = cd;
+
         if (gm.started == true)
         {
             if (headMoveTime <= 0)
@@ -62,10 +73,22 @@ public class PlayerController : MonoBehaviour
             {
                 StartCoroutine(Skill());
             }
+
+            if (firecooldown == true)
+            {
+                StartCoroutine(Shoot());
+            }
+
+            if (canUseSkill == false)
+            {
+                cd -= Time.deltaTime;
+            }
+            else
+            {
+                cd = 5f;
+            }
+
         }
-
-
-
     }
 
     private void FixedUpdate()
@@ -79,10 +102,12 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator Skill()
     {
+        //cd -= Time.deltaTime;
         canUseSkill = false;
         Instantiate(forcefieldPrefab, head.transform.position, Quaternion.identity);
         yield return new WaitForSeconds(5f);
         canUseSkill = true;
+        //cd = 5f;
     }
 
     public void LoseHealth()
@@ -104,5 +129,13 @@ public class PlayerController : MonoBehaviour
         canBeDamaged = false;
         yield return new WaitForSeconds(invulnTime);
         canBeDamaged = true;
+    }
+
+    public IEnumerator Shoot()
+    {
+        firecooldown = false;
+        Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
+        yield return new WaitForSeconds(fireRate);
+        firecooldown = true;
     }
 }

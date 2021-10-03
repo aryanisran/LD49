@@ -9,6 +9,7 @@ TagManager:
   - RightWall
   - Bullet
   - ForceField
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,11 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "PlayerBullet")
+        {
+            Destroy(this.gameObject);
+        }
+
         switch (other.tag)
         {
             case "LeftWall":

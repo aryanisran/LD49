@@ -10,14 +10,32 @@ public class Enemy : MonoBehaviour
     public GameObject ProjectilePrefab;         // Prefab to spawn.
     public float fireRate;                      // Rate that bullet waves will be spawned
 
+
     [Header("Private Variables")]
     private Vector3 startPoint;                 // Starting position of the bullet.
     private const float radius = 1F;            // Help us find the move direction.
-    // Start is called before the first frame update
+    private int health = 100;
+    bool dead;
     void Start()
     {
         startPoint = transform.position;
         InvokeRepeating("SpawnProjectile", 0f, fireRate);
+    }
+
+    private void Update()
+    {
+        if (health <= 0 && dead == false)
+        {
+            StartCoroutine(Death());
+        }
+    }
+
+    public IEnumerator Death()
+    {
+        dead = true;
+        //enemy death fx
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
     }
 
     // Spawns x number of projectiles.
@@ -44,6 +62,14 @@ public class Enemy : MonoBehaviour
             Destroy(tmpObj, 10F);
 
             angle += angleStep;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "PlayerBullet")
+        {
+            health -= 50;
         }
     }
 }

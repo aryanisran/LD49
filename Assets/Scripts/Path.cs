@@ -12,7 +12,6 @@ public class Path : MonoBehaviour
 
     public GameObject[] itemSpawnPoint;
 
-
     private void Start()
     {
         foreach (GameObject point in itemSpawnPoint)
