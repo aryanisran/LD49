@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canBeDamaged)
         {
+            GetComponent<Animator>().SetTrigger("damaged");
             health--;
             StartCoroutine(Invuln());
             GameController.instance.UpdateHealth(health);
