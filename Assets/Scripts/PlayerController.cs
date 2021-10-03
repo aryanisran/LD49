@@ -10,10 +10,10 @@ public class PlayerController : MonoBehaviour
     public GameObject head, tail;
     Rigidbody headRb, tailRb;
     float headMoveTime;
-    public bool canUseSkill;
+    public bool canUseSkill, canBeDamaged;
     int headDirection, tailDirection;
     float headSpeed, tailSpeed;
-    public float maxHeadSpeed, baseTailSpeed, moveUpSpeed;
+    public float maxHeadSpeed, baseTailSpeed, moveUpSpeed, invulnTime;
     public int health;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
         tailRb = tail.GetComponent<Rigidbody>();
         tailSpeed = baseTailSpeed;
         canUseSkill = true;
+        canBeDamaged = true;
     }
 
     // Update is called once per frame
@@ -85,11 +86,22 @@ public class PlayerController : MonoBehaviour
 
     public void LoseHealth()
     {
-        health--;
-        GameController.instance.UpdateHealth(health);
-        if(health <= 0)
+        if (canBeDamaged)
         {
-            GameController.instance.GameOver();
+            health--;
+            StartCoroutine(Invuln());
+            GameController.instance.UpdateHealth(health);
+            if(health <= 0)
+            {
+                GameController.instance.GameOver();
+            }
         }
+    }
+
+    IEnumerator Invuln()
+    {
+        canBeDamaged = false;
+        yield return new WaitForSeconds(invulnTime);
+        canBeDamaged = true;
     }
 }

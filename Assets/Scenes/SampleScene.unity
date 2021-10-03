@@ -2826,9 +2826,11 @@ MonoBehaviour:
   head: {fileID: 2041759962202420220}
   tail: {fileID: 2041759962202420221}
   canUseSkill: 0
+  canBeDamaged: 0
   maxHeadSpeed: 1
   baseTailSpeed: 4
   moveUpSpeed: 7
+  invulnTime: 1
   health: 3
 --- !u!136 &2041759962202420228
 CapsuleCollider:
