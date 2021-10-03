@@ -235,6 +235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
+  normalMat: {fileID: -8896051167825165466, guid: 2a9ea8922a649f9458d5e7ed4cd6f6a6, type: 3}
+  bouncyMat: {fileID: 2100000, guid: f828ddbedfa90094b8f46d3004177113, type: 2}
 --- !u!1 &4548472331168907986
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +391,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
+  normalMat: {fileID: -8896051167825165466, guid: 2a9ea8922a649f9458d5e7ed4cd6f6a6, type: 3}
+  bouncyMat: {fileID: 2100000, guid: f828ddbedfa90094b8f46d3004177113, type: 2}
 --- !u!1 &7209366452098689175
 GameObject:
   m_ObjectHideFlags: 0

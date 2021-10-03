@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     float headSpeed, tailSpeed;
     public float maxHeadSpeed, baseTailSpeed, moveUpSpeed, invulnTime;
     public int health;
+    public bool bouncing;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (gm.started == true)
+        if (gm.started == true && !bouncing)
         {
             headRb.velocity = Vector3.right * headDirection * headSpeed + head.transform.up * moveUpSpeed;
             tailRb.velocity = Vector3.right * tailDirection * tailSpeed;

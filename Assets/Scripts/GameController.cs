@@ -10,7 +10,8 @@ public class GameController : MonoBehaviour
     public GameObject titleScreen;
 
     float duration;
-    public bool started;
+    public bool started, bouncyWalls;
+    public float bouncyDuration;
 
     public Text lastedDuration;
     public Text hs;
@@ -97,5 +98,17 @@ public class GameController : MonoBehaviour
                 healthUI[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    public void SetBounce()
+    {
+        bouncyWalls = true;
+        CancelInvoke();
+        Invoke("UnsetBounce", bouncyDuration);
+    }
+
+    void UnsetBounce()
+    {
+        bouncyWalls = false;
     }
 }

@@ -155,6 +155,8 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1743840989}
   titleScreen: {fileID: 1359300653}
   started: 0
+  bouncyWalls: 0
+  bouncyDuration: 5
   lastedDuration: {fileID: 920555207}
   hs: {fileID: 377952584}
   healthUI:
@@ -2625,6 +2627,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2349947247646809118, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3148800785598740832, guid: 99d98e8a974a3c043b525290a83dec40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2832,6 +2838,7 @@ MonoBehaviour:
   moveUpSpeed: 7
   invulnTime: 1
   health: 3
+  bouncing: 0
 --- !u!136 &2041759962202420228
 CapsuleCollider:
   m_ObjectHideFlags: 0
