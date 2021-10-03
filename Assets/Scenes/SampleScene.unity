@@ -1931,6 +1931,72 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &1131887060
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 682267561}
+    m_Modifications:
+    - target: {fileID: 5943107448385266397, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_Name
+      value: Turbo Boost Powerup FX (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.85999966
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266398, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943107448385266399, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+--- !u!198 &1131887061 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5943107448385266399, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+  m_PrefabInstance: {fileID: 1131887060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1184912938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,6 +2431,11 @@ RectTransform:
   m_AnchoredPosition: {x: 18, y: -82}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!198 &1593553561 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5943107448385266399, guid: e0d45935df51b7e459b5b57b988c0992, type: 3}
+  m_PrefabInstance: {fileID: 1718058222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1642505153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,6 +3329,8 @@ MonoBehaviour:
   boostTime: 5
   health: 3
   boosting: 0
+  normalParticle: {fileID: 1593553561}
+  boostParticle: {fileID: 1131887061}
 --- !u!136 &2041759962202420228
 CapsuleCollider:
   m_ObjectHideFlags: 0

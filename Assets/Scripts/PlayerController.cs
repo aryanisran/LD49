@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     float moveUpSpeed;
     public int health;
     public bool boosting;
+    public ParticleSystem normalParticle, boostParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -130,6 +131,8 @@ public class PlayerController : MonoBehaviour
         boosting = true;
         moveUpSpeed = baseMoveUpSpeed * 2;
         headDirection = 0;
+        normalParticle.Pause();
+        boostParticle.Play();
         CancelInvoke();
         Invoke("UnsetBoosting", boostTime);
     }
@@ -137,6 +140,8 @@ public class PlayerController : MonoBehaviour
     void UnsetBoosting()
     {
         moveUpSpeed = baseMoveUpSpeed;
+        normalParticle.Play();
+        boostParticle.Stop();
         boosting = false;
     }
 }
