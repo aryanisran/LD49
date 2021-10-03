@@ -185,6 +185,7 @@ MonoBehaviour:
   projectileSpeed: 5
   ProjectilePrefab: {fileID: 2789531987388973649, guid: 7a36784169e81124eab208d47bcf6ab5, type: 3}
   fireRate: 2
+  deathfx: {fileID: 5655876217502649574, guid: b7fd97a17adf3f84daed2a766c53ce2f, type: 3}
 --- !u!135 &7065656952988603228
 SphereCollider:
   m_ObjectHideFlags: 0
