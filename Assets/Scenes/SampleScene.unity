@@ -461,38 +461,38 @@ MonoBehaviour:
   - name: bgm
     loop: 1
     clip: {fileID: 8300000, guid: c313aa1949d1f53469a910c524ce631b, type: 3}
-    volume: 0.277
-    pitch: 0
+    volume: 0.5
+    pitch: 1
     source: {fileID: 0}
   - name: playerdeath
     loop: 0
     clip: {fileID: 8300000, guid: 9f31a287cf0d6e342af6e6f29592a10e, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
   - name: enemydeath
     loop: 0
     clip: {fileID: 8300000, guid: e2e4e31cfa258bf43bd4fda7eee2d370, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
   - name: playerhit
     loop: 0
     clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: playerbounce
     loop: 0
     clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: powerupcollect
     loop: 0
     clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: forcefield
     loop: 0
@@ -504,7 +504,7 @@ MonoBehaviour:
     loop: 0
     clip: {fileID: 8300000, guid: 05bfe862d19703e4c91c85ab9510bd2b, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
   muted: 0
 --- !u!4 &117052791
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a01d9756f729bf945a95569f8d19d923, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0bb7e19075d43984c922c64a99901b9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1294,6 +1294,10 @@ PrefabInstance:
     - target: {fileID: 3055022730994161675, guid: a7707af78b6ed4d41bf947e22c2870c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350157414186501173, guid: a7707af78b6ed4d41bf947e22c2870c8, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4199030949667222085, guid: a7707af78b6ed4d41bf947e22c2870c8, type: 3}
       propertyPath: m_TagString
@@ -1856,7 +1860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a01d9756f729bf945a95569f8d19d923, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0bb7e19075d43984c922c64a99901b9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3645,7 +3649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a01d9756f729bf945a95569f8d19d923, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0bb7e19075d43984c922c64a99901b9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3930,6 +3934,10 @@ PrefabInstance:
     - target: {fileID: 3055022730994161675, guid: a7707af78b6ed4d41bf947e22c2870c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350157414186501173, guid: a7707af78b6ed4d41bf947e22c2870c8, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3959490776727174474, guid: a7707af78b6ed4d41bf947e22c2870c8, type: 3}
       propertyPath: m_IsActive

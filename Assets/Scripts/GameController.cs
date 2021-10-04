@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
     public SpriteRenderer background;
     public Sprite[] bgs;
 
+    bool musicPlaying;
     private void Awake()
     {
         if(instance == null)
@@ -54,16 +55,10 @@ public class GameController : MonoBehaviour
     {
         if (started == true)
         {
-            AudioManager.instance.Play("bgm");
             titleScreen.SetActive(false);
             duration += Time.deltaTime;
             lastedDuration.text = Mathf.Round(duration).ToString();
         }
-        else
-        {
-            AudioManager.instance.Stop("bgm");
-        }
-
     }
 
     public void GameOver()
