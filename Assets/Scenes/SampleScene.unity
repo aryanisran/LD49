@@ -423,6 +423,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79790341}
   m_CullTransparentMesh: 1
+--- !u!1 &117052789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117052791}
+  - component: {fileID: 117052790}
+  m_Layer: 0
+  m_Name: audiuomanage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &117052790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117052789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c212a0035f742144d93f0e3dd2bd2ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: bgm
+    loop: 0
+    clip: {fileID: 8300000, guid: c313aa1949d1f53469a910c524ce631b, type: 3}
+    volume: 0.277
+    pitch: 0
+    source: {fileID: 0}
+  - name: playerdeath
+    loop: 0
+    clip: {fileID: 8300000, guid: 9f31a287cf0d6e342af6e6f29592a10e, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: enemydeath
+    loop: 0
+    clip: {fileID: 8300000, guid: e2e4e31cfa258bf43bd4fda7eee2d370, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: playerhit
+    loop: 0
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: playerbounce
+    loop: 0
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: powerupcollect
+    loop: 0
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: forcefield
+    loop: 0
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: turbo
+    loop: 0
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  muted: 0
+--- !u!4 &117052791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117052789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.22834794, y: -4.3902783, z: -2.0617359}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193871984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4030,7 +4123,7 @@ Transform:
   m_GameObject: {fileID: 3183246524352450738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -6.37, z: 0.58}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children:
   - {fileID: 2021698820}
   - {fileID: 5832383278959951901}
