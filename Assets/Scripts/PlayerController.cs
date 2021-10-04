@@ -74,7 +74,11 @@ public class PlayerController : MonoBehaviour
             {
                 cd = 5f;
             }
+        }
 
+        if (health >= 3)
+        {
+            health = 3;
         }
     }
 
