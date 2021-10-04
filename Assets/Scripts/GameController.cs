@@ -24,6 +24,9 @@ public class GameController : MonoBehaviour
 
     public Image[] healthUI;
 
+    public SpriteRenderer background;
+    public Sprite[] bgs;
+
     private void Awake()
     {
         if(instance == null)

@@ -16,6 +16,7 @@ public class Path : MonoBehaviour
 
     private void Start()
     {
+        GameController.instance.background.sprite = GameController.instance.bgs[Random.Range(0, GameController.instance.bgs.Length)];
         foreach (GameObject point in itemSpawnPoint)
         {
             int chance = Random.Range(1, 10);
