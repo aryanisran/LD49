@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public enum _power { bounce, boost };
+    public enum _power { bounce, boost, health };
     public _power power;
+
+    public PlayerController player;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +20,10 @@ public class PowerUp : MonoBehaviour
                     break;
                 case _power.boost:
                     other.GetComponent<PlayerController>().SetBoosting();
+                    break;
+                case _power.health:
+                    player = FindObjectOfType<PlayerController>();
+                    player.health++;
                     break;
                 default:
                     break;

@@ -33,6 +33,7 @@ public class Bullet : MonoBehaviour
                 break;
             case "Rocket":
                 other.GetComponent<PlayerController>().LoseHealth();
+                Destroy(this.gameObject);
                 break;
             default:
                 break;
