@@ -27,7 +27,9 @@ public class GameController : MonoBehaviour
     public SpriteRenderer background;
     public Sprite[] bgs;
 
-    bool musicPlaying;
+    public Image muteButton;
+    public Sprite[] muteSprites;
+
     private void Awake()
     {
         if(instance == null)
@@ -53,6 +55,14 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (AudioManager.instance.muted)
+        {
+            muteButton.sprite = muteSprites[1];
+        }
+        else
+        {
+            muteButton.sprite = muteSprites[0];
+        }
         if (started == true)
         {
             titleScreen.SetActive(false);
@@ -126,5 +136,10 @@ public class GameController : MonoBehaviour
     void UnsetBounce()
     {
         bouncyWalls = false;
+    }
+
+    public void Mute()
+    {
+        AudioManager.instance.Mute();
     }
 }

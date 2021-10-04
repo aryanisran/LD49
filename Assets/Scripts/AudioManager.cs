@@ -118,12 +118,14 @@ public class AudioManager : MonoBehaviour
     {
         if (!muted)
         {
+            Pause("bgm");
             muted = true;
         }
 
         else
         {
             muted = false;
+            Play("bgm");
         }
     }
 
