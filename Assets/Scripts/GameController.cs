@@ -51,9 +51,14 @@ public class GameController : MonoBehaviour
     {
         if (started == true)
         {
+            AudioManager.instance.Play("bgm");
             titleScreen.SetActive(false);
             duration += Time.deltaTime;
             lastedDuration.text = Mathf.Round(duration).ToString();
+        }
+        else
+        {
+            AudioManager.instance.Stop("bgm");
         }
 
     }
@@ -71,7 +76,8 @@ public class GameController : MonoBehaviour
     {
         Destroy(thePlayer.gameObject);
         Instantiate(deathfx, thePlayer.transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.5f);
+        AudioManager.instance.Play("playerdeath");
+        yield return new WaitForSeconds(1f);
         Time.timeScale = 0;
         //started = false;
         gameOverScreen.SetActive(true);

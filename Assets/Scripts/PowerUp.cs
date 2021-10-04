@@ -16,12 +16,15 @@ public class PowerUp : MonoBehaviour
             switch (power)
             {
                 case _power.bounce:
+                    AudioManager.instance.Play("powerupcollect");
                     GameController.instance.SetBounce();
                     break;
                 case _power.boost:
+                    AudioManager.instance.Play("turbo");
                     other.GetComponent<PlayerController>().SetBoosting();
                     break;
                 case _power.health:
+                    AudioManager.instance.Play("powerupcollect");
                     player = FindObjectOfType<PlayerController>();
                     player.health++;
                     break;

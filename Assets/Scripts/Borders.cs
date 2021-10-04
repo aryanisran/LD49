@@ -33,6 +33,7 @@ public class Borders : MonoBehaviour
         {
             if (gm.bouncyWalls)
             {
+                AudioManager.instance.Play("playerbounce");
                 PlayerController pc = other.GetComponent<PlayerController>();
                 Vector3 normal = Vector3.zero;
                 if (transform.CompareTag("LeftWall"))

@@ -95,6 +95,7 @@ public class PlayerController : MonoBehaviour
     {
         //cd -= Time.deltaTime;
         canUseSkill = false;
+        AudioManager.instance.Play("forcefield");
         Instantiate(forcefieldPrefab, head.transform.position, Quaternion.identity);
         yield return new WaitForSeconds(5f);
         canUseSkill = true;
@@ -105,6 +106,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canBeDamaged)
         {
+            AudioManager.instance.Play("playerhit");
             GetComponent<Animator>().SetTrigger("damaged");
             health--;
             StartCoroutine(Invuln());

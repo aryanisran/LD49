@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
     {
         dead = true;
         Instantiate(deathfx, transform.position, transform.rotation);
+        AudioManager.instance.Play("enemydeath");
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
     }
