@@ -70,12 +70,20 @@ public class Borders : MonoBehaviour
                 }
 
                 Instantiate(bounceParticle, collision.contacts[0].point, Quaternion.identity);
-                collision.transform.transform.up = Vector3.Reflect(collision.transform.transform.up, normal);
+                collision.transform.up = Vector3.Reflect(collision.transform.up, normal);
             }
             else
             {
                 gm.GameOver();
             }
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (!gm.bouncyWalls)
+        {
+            gm.GameOver();
         }
     }
 }

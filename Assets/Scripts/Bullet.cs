@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     Rigidbody rb;
-    bool bounced;
+    bool bounced = false;
 
     private void Start()
     {
