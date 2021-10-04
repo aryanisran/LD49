@@ -26,7 +26,7 @@ public class PowerUp : MonoBehaviour
                 case _power.health:
                     AudioManager.instance.Play("powerupcollect");
                     player = FindObjectOfType<PlayerController>();
-                    player.health++;
+                    player.health = Mathf.Clamp(player.health + 1, 0, 3);
                     break;
                 default:
                     break;

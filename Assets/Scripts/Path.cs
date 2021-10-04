@@ -24,7 +24,7 @@ public class Path : MonoBehaviour
             {
                 foreach (GameObject powerup in powerUp)
                 {
-                    int powerChance = Random.Range(0, 2);
+                    int powerChance = Random.Range(0, powerUp.Length);
                     powerUpToSpawn = powerUp[powerChance];
                 }
                 item = Instantiate(powerUpToSpawn, point.transform.position, Quaternion.identity);
@@ -45,17 +45,9 @@ public class Path : MonoBehaviour
     {
         if (other.tag == "Rocket")
         {
-            StartCoroutine(NewPath());
+            Instantiate(pathPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            GetComponent<BoxCollider>().enabled = false;
+            Destroy(gameObject, 6f);
         }
     }
-
-    public IEnumerator NewPath()
-    {
-        Instantiate(pathPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
-        GetComponent<BoxCollider>().enabled = false;
-        yield return new WaitForSeconds(6f);
-        Destroy(itself);
-    }
-
-    
 }

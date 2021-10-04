@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
 
             if (canUseSkill == false)
             {
-                cd -= Time.deltaTime;
+                cd += Time.deltaTime;
             }
             else
             {
@@ -95,6 +95,7 @@ public class PlayerController : MonoBehaviour
     {
         //cd -= Time.deltaTime;
         canUseSkill = false;
+        cd = 0;
         AudioManager.instance.Play("forcefield");
         Instantiate(forcefieldPrefab, head.transform.position, Quaternion.identity);
         yield return new WaitForSeconds(5f);
