@@ -111,8 +111,11 @@ MonoBehaviour:
   itself: {fileID: 6425075622533317997}
   pathPrefab: {fileID: 6425075622533317997}
   spawnPoint: {fileID: 8307713807291091809}
-  powerUp: {fileID: 5808268974329313757, guid: 0abca7f82380b7e459e356fe50305d5f, type: 3}
   enemy: {fileID: 5201808188438611552, guid: 5b45e4358443d37409d0d014299e8bff, type: 3}
+  powerUp:
+  - {fileID: 2279734786163991002, guid: db02aebdb8a177c49b0d5304dc4a3f59, type: 3}
+  - {fileID: 473025867094333097, guid: 501792e3d47d9c9499e4ae218b236e57, type: 3}
+  - {fileID: 1923696961088926812, guid: 3bfc27b873823a34fb6eff18c47d7934, type: 3}
   itemSpawnPoint:
   - {fileID: 2148902699338235154}
   - {fileID: 4033457368031124193}
